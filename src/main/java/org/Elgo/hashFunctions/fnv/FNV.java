@@ -1,6 +1,8 @@
 package org.Elgo.hashFunctions.fnv;
 
-public class FNV {
+import org.Elgo.hashFunctions.HashFunction;
+
+public class FNV implements HashFunction {
     /**
      * Helps convert a byte into its unsigned value
      */
@@ -13,7 +15,8 @@ public class FNV {
 
     public static final long prime =16777619;
 
-    public static int fnv(byte[] bytes) {
+
+    public static int hash32(byte[] bytes,long seed) {
 
         long hash=2166136261L;
 
@@ -24,11 +27,11 @@ public class FNV {
 
         return (int) hash;
     }
-
-    public static int fnv(String data){
+@Override
+    public  int hash32(String data,long seed){
         byte[] bytes = data.getBytes();
 
-        return fnv(bytes);
+        return hash32(bytes,0);
     }
 
 

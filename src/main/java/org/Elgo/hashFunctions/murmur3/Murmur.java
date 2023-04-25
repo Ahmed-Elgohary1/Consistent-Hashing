@@ -1,9 +1,11 @@
 package org.Elgo.hashFunctions.murmur3;
 
 
+import org.Elgo.hashFunctions.HashFunction;
+
 import static org.Elgo.hashFunctions.murmur3.Util.rotl32;
 
-public class Murmur {
+public class Murmur implements HashFunction {
 
 
     /**
@@ -22,13 +24,13 @@ public class Murmur {
     private static final int m = 5;
 
 
-
-    public static int hash32(String data,  long seed) {
+    @Override
+    public  int hash32(String data,  long seed) {
         byte[] bytes = data.getBytes();
         return hash32(bytes,seed);
     }
 
-    public static int hash32(final byte[] data, long seed) {
+    public  int hash32(final byte[] data, long seed) {
         int length=data.length;
         final int nblocks = length >> 2;
         long hash = seed;
