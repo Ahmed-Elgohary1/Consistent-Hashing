@@ -6,10 +6,10 @@ public class PhysicalNode implements Node{
 
     private final String key;
 
-    PhysicalNode(String key){
+   public PhysicalNode(String key){
         this.key=key;
     }
-    PhysicalNode(){
+    public PhysicalNode(){
         String randomId = UUID.randomUUID().toString().replace("-", "");
         this.key=randomId;
     }

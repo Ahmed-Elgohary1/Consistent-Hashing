@@ -8,7 +8,7 @@ public class VirtualNode implements Node{
     private final Node physicalNode;
     private int virtualIndex;
 
-    VirtualNode(@NotNull Node physicalNode,@NotNull int virtualIndex){
+    public VirtualNode(@NotNull Node physicalNode, @NotNull int virtualIndex){
         this.physicalNode=physicalNode;
         this.virtualIndex=virtualIndex;
 
