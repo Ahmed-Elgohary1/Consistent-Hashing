@@ -2,6 +2,13 @@
 
 This repository contains a Java implementation of ring consistent hashing, a technique for distributing data across a cluster of servers in a way that minimizes the amount of data that needs to be moved when a server is added or removed from the cluster. The implementation includes two hashing functions, Murmur and FNV, which can be used to generate hash values for keys.
 
+## Features
+
+- Ring consistent hashing implementation in Java
+- Two hashing functions included: Murmur and FNV
+- Easy-to-use API for adding servers and getting server assignments for keys
+- Customizable number of virtual nodes per server for fine-grained control over distribution
+
 ## Usage
 
 To use the ring consistent hashing implementation, you can create a ConsistentHash object and add servers to it using the addServer method:
